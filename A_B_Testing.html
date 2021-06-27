@@ -55,9 +55,10 @@
                         <hr>
                         <h6>1-1 Other Types of Experiment</h6>
                         There are two types of experiment that we can implement, one that allow each group to only see oe version of the pages. If group A is asigned to interact with the yellow webpage mentioned above,
-                        they will not be able to use the webpage with blue color. The goes for group B. This is often called <strong>Between-subjects design</strong>. The other method is called <strong>Within-subjects design</strong> 
+                        they will not be able to use the webpage with blue color. The goes for group B. This is often called <strong>Between-subjects design</strong>. 
+                        <p></p>The other method is called <strong>Within-subjects design</strong> 
                         and it allow both group to interact with the two designs. In this process, we can show group A the yellow page first then blue next and we reverse the other for group B. It is important to note that the customers are randomly selected. 
-                        ooooooooooooooooooooooooo
+
                         <hr>
                         
                         <h6>1-2 Sampling methods</h6>
@@ -67,26 +68,59 @@
                         <hr>
 
                         <h6>1-3 Measuring Outcomes</h6>
-                        One should not confuse the goal of the experiment and the evaluation metrics. They are both similar but distinguishable because the gaol could be different from the evaluation metrics.
+                        One should not confuse the goal of the experiment and the evaluation metrics. They are both similar but distinguishable because the goal could be different from the evaluation metrics.
                         Some examples of video recommendation system metrics could be user, better performance if watch time is longer, better performance if more movie number of search,
                         and better performance if higher video ranking.
 
                         <hr>
 
                         <h6>1-4 Building metrics</h6>
-
+                        Sticking wih our previous example of Amazonic group A and B, we can build the metrics by first creating metric funnel. A metric funnel is the steps that a use takes on the website. 
+                        For instance, a user land on the home page, search a product by name, click on the lowest price filter, add to cart, and checkout. Using this principal, we can decide where to split our user called a <strong>Unit of Diversion</strong>
+                        A unit of diversion is the place that we can use to randomly split the group. 
+                        <br>
+                        <p></p>
+                        We can have different unit of diversion such as <strong>Event-based</strong>, <strong>Cookie-based</strong>, <strong>Account-based </strong>. In Event-based
+                        we can associate the user behavior with an event such as page view. Every time the user interacts the page, the experiment is triggered. With cookie-based, a cookie is assigned to the user device and tracks the experiment information.
+                        lastly, the account-based diversion requires the use of user information such id, phone number, or email to save the experiment details information.
+                        <br>
+                        <p></p>
+                        Now that the unit of diversion is in place, we can cover the type of metrics. Based of the features, we can have an invariant metric and an evaluation metric. 
+                        An invariant metric is a metric that remain consistent with between groups. It can be the number of cookies in each group. An evaluation metric focuses on each user during the experiment. One example of evaluation metric can be the amount of user of left the page without making a purchase. 
+                        <br>
+                        <p></p>
+<!--                         
                         <h6>1-5 Assessing the control variables</h6>
+                         -->
 
-                        <h6>1-3 Bias in experiment</h6>
+                        <h6>1-5 Bias in experiment</h6>
+                        In terms of bias, we can identify sampling bias, novelty bias, and experiment bias. Sampling bias occurs when our sampling process fail to collect a representative data from the population.
+                        novelty bias has to do with a user for instance behavior change because they are seeing something new. Experiment bias is where the experimenter might be unable to resist the temptation and 
+                        push the participant toward taking steps that will generate the expected results.
+                        <p></p>
 
-                        <h6>1-3 Mnemonic</h6>
-
-
-
+                        <h6>1-6 Mnemonic</h6>
+                        To conclude this section, one can use a mnemonic <strong>SMART</strong> to remember the necessary steps that needed to complete an experiment design.
+                        <p></p><strong>Specific </strong> Having specific experiment goals.
+                        <p></p><strong>Measurable </strong>Ensuring the metrics used are measurable
+                        <p></p><strong>Achievable </strong> Ensuring the experiment approach is achievable
+                        <p></p><strong>Relevant </strong> Ensuring the experiment relevant and has a purpose
+                        <p></p><strong>Timely </strong> Ensuring the experiment has reasonable time limit of does not indefinitely
+                        <p></p>
 
                         <h5>2- Statistical techniques</h5>
-
-
+                        <p></p>
+                        <h6>2-1 Statistical Significance</h6>
+                        <p></p>
+                        <h6>Experiment Size</h6>
+                        <p></p>
+                        <h6>Importance of Dummy Tests</h6>
+                        <p></p>
+                        <h6>Non-Parametric Tests</h6>
+                        <p></p>
+                        <h6>Early Stopping</h6>
+                        <p></p>
+                        <h5>3-A/B Testing example analysis</h5>
                     </div>
                 </div>
             </div>
