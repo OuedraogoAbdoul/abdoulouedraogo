@@ -133,27 +133,76 @@
                             </p>
                             <p><b>Sample size </b></p>
                             <p>
-                                We compute the sample size using <a href="https://www.scipy.org/"> scipy module. </a>. After computation, we obtained the minimum value of 
+                                We compute the sample size using two ways. <a href="https://www.scipy.org/"> scipy module. </a>. After computation, we obtained the minimum value of 
                                 3835 which represent the number of user required for each group (control and experiment). 
                                 <img src="blog_images\get_sample.JPG" align="left"/>
+
+
+                                The calculated value seems to be reasonable. However, if we want to inform our project manager of potential wiggle room in terms of the number of samples required for the testing, we can simulate several values as shown below.
+                                <img src="blog_images\multiple_samplesize.png" align="right"/>. 
+                                
+                                <p>As we can see, when we increase the proportion of improvement rate from 2% to about 9%, we notice a gradual decrease in the number of samples required for the testing. What it tells us is that, if we want a small improvement in conversion rate, we will likely need more sample size but the sample size will be lower if the project manager accepts a higher rate. 
+
+                                    This can be beneficial for startups that often have the inability to collect significant data. </p>
+                                
+
                             </p>
 
+                            <p><b>Bootstrap method </b></p>
 
+                            Now that we know the sample size and we assume the data is collected (
+                                <a href="https://www.kaggle.com/ivanpl/a-b-testing"> kaggle</a>), we compute the experiment. We start by using the bootstrap technique in which we sample 1000 from the data for each group and we compute the conversion rate. 
+                            The result is used to simulate a normal distribution with the same spread and size. See the below code for more details. 
+                            <img src="blog_images\bottstarpsample.JPG" align="left"/>
+                            <p>
 
+                            </p>
+
+                                <p>
+                                    Here we can observe the histogram plot showing the distribution of the simulation sample. Note that the vertical line represent the
+                                    our mean conversion difference rate from the two groups. Since we our initial set up states that H1: new_page > old_page, we can compute our p-value with following formula. p_value = (null_values > observ_dif).mean()
+
+                                </p>
+
+                            <p>
+
+                            </p>
+                                <p>
+                                    With this approach, we have a p-value of 0.06 which is higher that 0.05. We can then conclude that we fail to reject the null. this
+                                    means that our alternative is not true. 
+                                </p>
                             <p>
                                 
                             </p>
 
-                            <p>
+                                <p>
 
+                                    
+                                </p>
                                 
-                            </p>
-                                
+                                <p><b>Scipy method </b></p>
+                                <p>
+                                    For this approach, there are two reference that we found very simple and well explained that it is
+                                    best to just have the reader explore them instead of having us repeat similar content. 
+                                    Please find out more by visiting <a href="https://www.kaggle.com/ivanpl/a-b-testing"> kaggle</a> and
+                                    <a href="https://medium.com/@RenatoFillinich/ab-testing-with-python-e5964dd66143#2.-Collecting-and-preparing-the-data"> medium</a>.
 
 
+                                </p>
+
+                                <p>Both article also draw the conclusion that the p-value is higher than 0.05 as we did. This tells us the power of bootstrapping</p>
+
                             
                             
-                            
+                        <h7 class="section-heading text-uppercase"><b>Interpreting results and decision making </b></h7>
+                        <p>
+
+                        </p>
+                        Note that before drawing any conclusion, it is important to perform some sanity checks such as checking that the control and treatment are properly assigned as expected. Also, verify that there was no surprising latency that occurs overall during the test that might have affected user experience. 
+
+                        To interpret the results, few things that we can take into consideration are the cost of launching.  Does the benefit outweigh the cost? When it comes to cost, we should also consider the cost of maintenance.
+
+ 
                             
 
                         
